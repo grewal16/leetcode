@@ -1,56 +1,64 @@
-# 🚀 LeetCode Data Structures: Segment Tree Mastery
+# 🚀 LeetCode Algorithms & Data Structures
 
 ## Short Description
-Dive into the world of efficient range queries and dynamic updates with this meticulously crafted collection of Segment Tree implementations. This repository provides optimized C++ solutions for classic LeetCode problems and fundamental Segment Tree operations, designed for competitive programmers, algorithm enthusiasts, and anyone looking to master advanced data structures. Unleash the power of logarithmic time complexity for your array-based challenges!
+Dive into a meticulously curated collection of advanced data structure implementations and algorithmic solutions, specifically tailored for competitive programming and technical interview preparation. This repository champions the power of Segment Trees, offering robust and optimized C++ solutions to complex range query and update problems that often stump even seasoned developers.
+
+## 🛡️ Project Health & Status
+This repository represents a rigorously developed and actively maintained set of algorithmic solutions. Each implementation is crafted for correctness and optimal performance, providing a highly reliable resource for understanding and applying advanced data structures in real-world problem-solving scenarios.
 
 ## ✨ Key Features
-*   **Comprehensive Segment Tree Operations:** Full implementations for building, querying (sum, min, max), and updating Segment Trees.
-*   **LeetCode Problem Solutions:** Tackle complex problems like "Find Building Where Alice and Bob Can Meet" and "Count Good Triplets" with elegant Segment Tree-based approaches.
-*   **Optimized Range Queries:** Achieve blazing-fast `O(log n)` performance for range sum, minimum, and maximum queries.
-*   **Dynamic Array Updates:** Efficiently handle point updates on mutable arrays while maintaining query performance.
-*   **Battle-Tested C++:** Robust and idiomatic C++ code, ready for competitive programming environments and interviews.
+*   **Comprehensive Segment Tree Implementations:** Master the foundational `buildTree` operations and efficient `query_sum` functionalities.
+*   **Advanced Range Queries:** Explore solutions for critical problems like `rangeMaximumIndexQuery`, `rangeMinimumQuery`, and `range_sum_query_mutable`.
+*   **Problem-Specific Applications:** Discover practical Segment Tree uses with solutions for `FindBuildingWhereAlice_and_BobCanMeet` and `count_good_triplets_in_array`.
+*   **Optimized C++ Codebase:** Benefit from clean, high-performance C++ code designed for competitive programming efficiency.
+*   **Educational Resource:** A perfect learning companion for those looking to conquer complex algorithmic challenges.
 
 ## Who is this for?
-*   **Competitive Programmers:** Level up your problem-solving arsenal for contests.
-*   **Algorithm Enthusiasts:** Deepen your understanding of advanced data structures.
-*   **Students & Learners:** Explore practical applications of Segment Trees.
-*   **Interview Candidates:** Prepare for technical interviews by mastering common algorithmic patterns.
+This repository is an essential asset for:
+*   **Competitive Programmers:** Gain an edge with highly optimized data structure implementations.
+*   **Software Engineering Candidates:** Ace your technical interviews by mastering advanced algorithms and problem-solving techniques.
+*   **Algorithm & Data Structure Enthusiasts:** Deepen your understanding of Segment Trees and their versatile applications.
 
 ## Technology Stack & Architecture
-This project is built primarily with **C++**, focusing on pure algorithmic implementations. The core "technology" is the **Segment Tree data structure** itself, demonstrating its versatility in solving a variety of array-based problems requiring efficient range queries and updates.
+This project is built purely in **C++**, emphasizing raw algorithmic efficiency and direct data structure manipulation. It leverages the inherent speed and control offered by C++ to deliver high-performance solutions without external frameworks.
 
 ## 📊 Architecture & Database Schema
-This repository focuses on algorithmic solutions, not a traditional database schema. Below is a conceptual flow diagram illustrating the core operations and architecture of a Segment Tree, which is the central component of this project.
+While this repository primarily focuses on individual algorithmic solutions rather than a holistic system architecture, the core operations around a Segment Tree can be visualized as a functional flow:
 
 ```mermaid
 graph TD
-    A["Input Data"] --> B["Build Tree"]
-    B --> C["Segment Tree"]
-    C --> D{"Operations"}
-    D -- "Query" --> E["Range Query Sum"]
-    D -- "Query" --> F["Range Query Min"]
-    D -- "Query" --> G["Range Query Max"]
-    D -- "Update" --> H["Update Element"]
-    E --> I["Result"]
-    F --> I
-    G --> I
-    H --> C
+    A["Input Array (e.g., `vector<int>` )"] --> B{"Build Segment Tree (e.g., `buildTree.cpp` )"};
+    B --> C["Segment Tree (Hierarchical Data Structure)"];
+    C -- "Range Query (Sum, Min, Max - e.g., `query_sum.cpp` )" --> D["Query Result"];
+    C -- "Point/Range Update (e.g., `range_sum_query_mutable.cpp` )" --> E["Updated Tree State"];
+    E --> C;
 ```
 
-## ⚡ Quick Start Guide
-To get these powerful Segment Tree solutions running on your local machine, follow these simple steps:
+## ⚙️ Configuration & Deployment
+The solutions within this repository are standalone C++ files. There is no complex configuration or deployment setup required. Simply having a standard C++ compiler (like g++) installed on your system is sufficient.
 
-1.  **Clone the repository:**
+## ⚡ Quick Start Guide
+To get started with any of the solutions:
+
+1.  **Clone the Repository:**
     ```bash
     git clone https://github.com/grewal16/leetcode.git
-    cd leetcode/segmentTree
+    cd leetcode
     ```
-2.  **Compile a specific solution (e.g., `buildTree.cpp`):**
+
+2.  **Navigate to a Solution:**
+    Choose any of the problems within the `segmentTree` directory.
     ```bash
-    g++ buildTree.cpp -o buildTree
+    cd segmentTree
     ```
-3.  **Run the compiled executable:**
+
+3.  **Compile and Run:**
+    Using `g++` (or your preferred C++ compiler), compile the desired solution and then execute it.
     ```bash
-    ./buildTree
+    # Example: Compile
+    g++ FindBuildingWhereAlice_and_BobCanMeet.cpp -o alice_bob_meet
+
+    # Example: Run
+    ./alice_bob_meet
     ```
-Each `.cpp` file within the `segmentTree` directory is a self-contained solution or implementation of a Segment Tree concept. Feel free to explore and experiment with them!
+    You may need to provide input as per the problem's requirements, typically through standard input.
